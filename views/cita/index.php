@@ -29,6 +29,7 @@ include_once __DIR__ . '/../templates/barra.php';
 
             <div class="campo">
                 <label for="fecha">Fecha</label>
+                <!-- ESTABLECE UN MINIMOS EN LAS FECHAS  -->
                 <input id="fecha" type="date" min="<?php echo date('Y-m-d', strtotime('+1 day')); ?>" />
             </div>
 
