@@ -43,6 +43,7 @@ RUTAS PRIVADAS
 =============================================*/
 $router->get('/cita', [CitaController::class, 'index']);
 $router->get('/api/servicios', [APIController::class, 'index']);
+$router->post('/envio', [APIController::class, 'envio']);
 
 
 

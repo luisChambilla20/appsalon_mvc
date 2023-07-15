@@ -317,6 +317,16 @@ function mostrarResumen() {
   resumen.appendChild(horaCita);
 }
 
-function reservarCita() {
-  console.log("enviando......");
+async function reservarCita() {
+  //IMPLEMTAMOS FETCH
+  const datos = new FormData();
+  datos.append("estado", "llego");
+
+  //ENLACE CON PHP
+  const url = "http://localhost:3000/envio";
+  const respuesta = await fetch(url);
+
+  const resumenFinal = respuesta.json();
+
+  console.log(resumenFinal);
 }
