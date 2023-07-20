@@ -21,3 +21,9 @@ include_once __DIR__ . '/../templates/alerta.php';
     <a href="/crear-cuenta">¿Aun no tienes una cuenta? Crea una</a>
     <a href="/olvide-password">¿Olvidaste tu password?</a>
 </div>
+
+
+<?php
+$script = "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+           <script src='build/js/app.js'></script>";
+?>

@@ -2,6 +2,7 @@
 
 namespace Controllers;
 
+use Model\Cita;
 use Model\Servicios;
 
 class APIController
@@ -12,12 +13,10 @@ class APIController
         echo json_encode($servicios);
     }
 
-    public static function envio()
+    public static function guardar()
     {
-        $respuesta = [
-            'datos' => $_POST
-        ];
-
+        $servicio = new Cita($_POST);
+        $respuesta = $servicio->guardar();
         echo json_encode($respuesta);
     }
 }
